@@ -1,20 +1,31 @@
+import { formatCurrency } from "../../../helpers"
 import { IConsumptionItemProps } from "./consumptionItem.types"
 
-const ConsumptionItem = ({item}: IConsumptionItemProps) => {
+const ConsumptionItem = ({item, deleteOrder}: IConsumptionItemProps) => {
     const {name, price, quantity} = item
   return (
-    <>
+    
     <div 
-    className=" border-2 border-teal-400 rounded-md hover:bg-teal-200 w-full p-3 flex justify-between"
+    className=" flex justify-between items-center border-t border-gray-200 py-5 last-of-type:border-b"
     >
 
-    <p>{name}</p>
-    <p>{quantity}</p>
-    <p className=" font-black">$ {price}</p>
+    <div>
+
+    <p>{name} - {formatCurrency(price)} </p>
+    <p className=" font-black">Quantity: {quantity} - {formatCurrency(price*quantity)} </p>
+    </div>
+
+<div>
+
+    <button
+    className=" flex items-center justify-center bg-red-600 h-8 w-8 rounded-full text-white font-black"
+    onClick={()=>deleteOrder(item)}
+    > x </button>
+</div>
 
     </div>
 
-    </>
+    
   )
 }
 

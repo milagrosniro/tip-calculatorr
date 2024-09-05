@@ -1,5 +1,6 @@
-import { IOrderState } from "../../types";
+import { IOrderItem, IOrderState } from "../../types";
 
 export interface IConsumptionProps{
-    order: IOrderState
+    order: IOrderState;
+    deleteOrder: (value: IOrderItem) => void
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IMenuItem, IOrderState } from "../../types";
+import { IMenuItem, IOrderItem, IOrderState } from "../../types";
 
 const useOrder = () => {
   const [order, setOrder] = useState<IOrderState>([]);
@@ -18,10 +18,16 @@ const useOrder = () => {
     }
   };
 
+  const deleteOrder = (orderItem: IOrderItem) => {
+    const orderUploader = order.filter((elem) => elem.id !== orderItem.id)
+    setOrder(orderUploader)
+  }
+
   return {
     addItem,
     order,
     setOrder,
+    deleteOrder
   };
 };
 

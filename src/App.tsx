@@ -5,19 +5,19 @@ import useOrder from "./components/hooks/useOrder";
 
 const App = () => {
 
-  const {addItem, order} = useOrder();
+  const {addItem, order, deleteOrder} = useOrder();
   
   return (
-    <>
+    <div className=" h-full">
     <Header/>
-    <main className=" max-w-7xl mx-auto py-20 grid md:grid-cols-2">
+    <main className=" max-w-7xl mx-auto py-20 grid md:grid-cols-2 h-full">
       <Menu addItem={addItem}/>
-      <Consumption order={order}/>
+      <Consumption order={order} deleteOrder={deleteOrder}/>
 
 
 
     </main>
-    </>
+    </div>
   )
 }
 
