@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 import { menuItems } from "../../data/db";
-import { IMenuState } from "./menu.types";
+import { IMenuProps, IMenuState } from "./menu.types";
 import MenuItem from "./MenuItem";
-import useOrder from "../hooks/useOrder";
 
-
-const Menu = () => {
+const Menu = ({addItem} : IMenuProps) => {
 
     const [data, setData] = useState<IMenuState>([]);
-
-    const {addItem} = useOrder();
 
     useEffect(()=>{
         setData(menuItems)

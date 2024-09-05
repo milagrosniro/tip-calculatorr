@@ -7,3 +7,5 @@ export interface IMenuItem {
 export interface IOrderItem extends IMenuItem {
     quantity: number;
 }
+
+export type IOrderState = IOrderItem[] | [];
