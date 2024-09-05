@@ -1,4 +1,4 @@
-import { IMenuItem } from "../types";
+import { IMenuItem, ITipOptions } from "../types";
 
 export const menuItems: IMenuItem[] = [
   {
@@ -62,3 +62,20 @@ export const menuItems: IMenuItem[] = [
     "price": 40
   }
 ]
+export const tipOptions : ITipOptions[] = [
+  {
+    id: "tip-10",
+    value: 0.1,
+    label: "10%",
+  },
+  {
+    id: "tip-20",
+    value: 0.2,
+    label: "20%",
+  },
+  {
+    id: "tip-50",
+    value: 0.5,
+    label: "50%",
+  },
+];

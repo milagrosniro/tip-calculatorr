@@ -9,3 +9,9 @@ export interface IOrderItem extends IMenuItem {
 }
 
 export type IOrderState = IOrderItem[] | [];
+
+export interface ITipOptions{
+    id: string,
+    value: number,
+    label: string,
+}

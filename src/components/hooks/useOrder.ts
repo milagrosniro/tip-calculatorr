@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { IMenuItem, IOrderItem, IOrderState } from "../../types";
+import { IMenuItem, IOrderItem, IOrderState, ITipOptions } from "../../types";
 
 const useOrder = () => {
   const [order, setOrder] = useState<IOrderState>([]);
-  console.log(order)
+  const [percentage, setPercentage] = useState<ITipOptions['value']>(0)
 
   const addItem = (item: IMenuItem) => {
     const findItem = order.find((elem) => elem.id === item.id);
@@ -18,8 +18,8 @@ const useOrder = () => {
     }
   };
 
-  const deleteOrder = (orderItem: IOrderItem) => {
-    const orderUploader = order.filter((elem) => elem.id !== orderItem.id)
+  const deleteOrder = (orderItem: IOrderItem['id']) => {
+    const orderUploader = order.filter((elem) => elem.id !== orderItem)
     setOrder(orderUploader)
   }
 
@@ -27,7 +27,9 @@ const useOrder = () => {
     addItem,
     order,
     setOrder,
-    deleteOrder
+    deleteOrder,
+    percentage,
+    setPercentage
   };
 };
 

@@ -2,5 +2,5 @@ import { IOrderItem } from "../../../types";
 
 export interface IConsumptionItemProps{
     item: IOrderItem;
-    deleteOrder: (value: IOrderItem) => void;
+    deleteOrder: (value: IOrderItem['id']) => void;
 }

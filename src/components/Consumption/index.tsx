@@ -1,7 +1,9 @@
+import OrderTotals from "../OrderTotals"
+import TipPercentageForm from "../TipPercentageForm"
 import ConsumptionItem from "./ConsumptionItem"
 import { IConsumptionProps } from "./consumption.types"
 
-const Consumption = ({order, deleteOrder}:IConsumptionProps) => {
+const Consumption = ({order, deleteOrder, percentage, setPercentage}:IConsumptionProps) => {
   return (
 
     <div className=" p-5 h-full">
@@ -13,6 +15,8 @@ const Consumption = ({order, deleteOrder}:IConsumptionProps) => {
            : order.map(elem => <ConsumptionItem key={elem.id} item={elem} deleteOrder={deleteOrder} />)
         }
      
+      <TipPercentageForm setPercentage={setPercentage} />
+      <OrderTotals order={order} percentage={percentage} />
       </div>
     </div>
   )

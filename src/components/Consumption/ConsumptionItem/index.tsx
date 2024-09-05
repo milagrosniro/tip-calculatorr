@@ -19,7 +19,7 @@ const ConsumptionItem = ({item, deleteOrder}: IConsumptionItemProps) => {
 
     <button
     className=" flex items-center justify-center bg-red-600 h-8 w-8 rounded-full text-white font-black"
-    onClick={()=>deleteOrder(item)}
+    onClick={()=>deleteOrder(item.id)}
     > x </button>
 </div>
 

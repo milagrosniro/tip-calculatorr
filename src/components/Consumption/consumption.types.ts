@@ -1,6 +1,8 @@
-import { IOrderItem, IOrderState } from "../../types";
+import { IOrderItem, IOrderState, ITipOptions } from "../../types";
 
 export interface IConsumptionProps{
     order: IOrderState;
-    deleteOrder: (value: IOrderItem) => void
+    deleteOrder: (value: IOrderItem['id']) => void;
+    percentage: number;
+    setPercentage: (value: ITipOptions['value']) => void
 }
