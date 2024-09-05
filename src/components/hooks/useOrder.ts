@@ -19,6 +19,7 @@ const useOrder = () => {
   };
 
   const deleteOrder = (orderItem: IOrderItem['id']) => {
+    
     const orderUploader = order.filter((elem) => elem.id !== orderItem)
     setOrder(orderUploader)
   }

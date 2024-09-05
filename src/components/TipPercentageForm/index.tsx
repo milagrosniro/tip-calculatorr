@@ -9,7 +9,12 @@ const TipPercentageForm = ({setPercentage}:ITipPercentageProps) => {
         {tipOptions.map((elem) => (
           <div className=" flex gap-2" key={elem.id}>
             <label htmlFor={elem.id}>{elem.label}</label>
-            <input id={elem.id} type="radio" name={"tip"} value={elem.value} onClick={()=> setPercentage(elem.value)}/>
+            <input 
+            id={elem.id} 
+            type="radio" 
+            name={"tip"} 
+            value={elem.value} 
+            onChange={(e)=> setPercentage(Number(e.target.value))}/>
           </div>
         ))}
       </form>
