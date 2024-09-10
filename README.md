@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# 💸 Restaurant Tip Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, fast, and user-friendly **Restaurant Tip Calculator** built with **ReactJS**, **TypeScript**, and **Tailwind CSS** using **Vite** as the build tool. This application allows users to easily calculate tips and total costs for meals, providing a smooth and optimized experience thanks to performance enhancements like `useMemo` and custom hooks.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Tip Calculation**: Enter the total bill, select the tip percentage, and see the total amount instantly.
+- **Performance Optimization**: The app uses React’s `useMemo` to optimize component re-renders, ensuring a fast and responsive interface.
+- **Custom Hooks**: Clean and reusable logic using custom hooks to handle calculations and state management efficiently.
+- **Responsive Design**: Fully responsive, thanks to **Tailwind CSS**, for a great experience on any device.
 
-## Expanding the ESLint configuration
+## 🛠 Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **ReactJS**: Frontend library for building the user interface.
+- **TypeScript**: Static typing for increased code quality and maintainability.
+- **Vite**: Next-generation build tool for fast development.
+- **Tailwind CSS**: Utility-first CSS framework for building responsive and customizable interfaces.
+- **useMemo**: Performance optimization by memoizing heavy calculations and preventing unnecessary re-renders.
+- **Custom Hooks**: Encapsulation of logic to keep the components clean and reusable.
 
-- Configure the top-level `parserOptions` property like this:
+## 🚀 Live Demo
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Check out the live version [here](https://66e01991f1c74e52793160ea--admirable-alpaca-6993b5.netlify.app/).
+
+## 🧑‍💻 Installation & Setup
+
+**Clone the repository:**
+
+```bash
+git clone https://github.com/milagrosniro/tip-calculatorr.git
+cd tip-calculatorr
+
+## 🧑‍💻 Installation & Setup
+
+**Install Dependencies:**
+
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+**Start the Project:**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+npm run dev
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+The project will be available at https://peaceful-cupcake-5d2ac1.netlify.app/
 ```
+
+## 📋 Available Scripts
+```bash
+npm run dev: Starts the development server.
+npm run build: Builds the project for production.
+npm run lint: Runs ESLint to analyze the code.
+npm run test: Runs unit tests (if any).
+ ```
+
+## 📝 License
+This project is licensed under the MIT License.
