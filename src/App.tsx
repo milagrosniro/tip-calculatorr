@@ -12,6 +12,7 @@ const App = () => {
     <Header/>
     <main className=" max-w-7xl mx-auto py-20 grid md:grid-cols-2 h-full">
       <Menu addItem={addItem}/>
+      
       <Consumption order={order} deleteOrder={deleteOrder} percentage={percentage} setPercentage={setPercentage} placeOrder={placeOrder}/>
 
     </main>
