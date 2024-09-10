@@ -1,7 +1,7 @@
 import { tipOptions } from "../../data/db";
 import { ITipPercentageProps } from "./tipPercentageForm.types";
 
-const TipPercentageForm = ({setPercentage}:ITipPercentageProps) => {
+const TipPercentageForm = ({setPercentage, percentage}:ITipPercentageProps) => {
   return (
     <div>
       <h3 className=" font-black text-2xl"> Tip:</h3>
@@ -14,7 +14,9 @@ const TipPercentageForm = ({setPercentage}:ITipPercentageProps) => {
             type="radio" 
             name={"tip"} 
             value={elem.value} 
-            onChange={(e)=> setPercentage(Number(e.target.value))}/>
+            onChange={(e)=> setPercentage(Number(e.target.value))}
+            checked={elem.value === percentage}
+            />
           </div>
         ))}
       </form>

@@ -18,11 +18,16 @@ const useOrder = () => {
     }
   };
 
-  const deleteOrder = (orderItem: IOrderItem['id']) => {
-    
+  const deleteOrder = (orderItem: IOrderItem['id']) => {   
     const orderUploader = order.filter((elem) => elem.id !== orderItem)
     setOrder(orderUploader)
   }
+
+  const placeOrder = () => {
+    setPercentage(0)
+    setOrder([])
+  }
+
 
   return {
     addItem,
@@ -30,7 +35,8 @@ const useOrder = () => {
     setOrder,
     deleteOrder,
     percentage,
-    setPercentage
+    setPercentage,
+    placeOrder
   };
 };
 
