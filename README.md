@@ -43,7 +43,7 @@ npm install
 ```bash
 npm run dev
 
-The project will be available at https://peaceful-cupcake-5d2ac1.netlify.app/
+The project will be available at https://66e01991f1c74e52793160ea--admirable-alpaca-6993b5.netlify.app/
 ```
 
 ## 📋 Available Scripts
