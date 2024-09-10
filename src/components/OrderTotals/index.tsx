@@ -8,7 +8,6 @@ const subtotalAmount =  useMemo(()=> order ? order.reduce((total, item)=> total 
 const tipAMount = useMemo(()=>subtotalAmount*percentage,[percentage, subtotalAmount])
 const totalAmount = useMemo(()=>subtotalAmount+tipAMount,[subtotalAmount, tipAMount])
 
-
   return (
     <>
     <div className=" space-y-3">
