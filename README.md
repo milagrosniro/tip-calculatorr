@@ -9,6 +9,19 @@ A sleek, fast, and user-friendly **Restaurant Tip Calculator** built with **Reac
 - **Custom Hooks**: Clean and reusable logic using custom hooks to handle calculations and state management efficiently.
 - **Responsive Design**: Fully responsive, thanks to **Tailwind CSS**, for a great experience on any device.
 
+## ⚙️ Evolution of the Project
+
+Initially, the **Restaurant Tip Calculator** was developed using **custom hooks** to manage state and encapsulate the logic for handling tip calculations. This provided a modular and reusable codebase that allowed for simple management of the application’s core functionality.
+
+However, as the project expanded and the state management became more complex, I opted to migrate the application to use the **`useReducer`** hook. This migration offered several key advantages:
+
+- **Simplified State Management**: `useReducer` centralizes state logic, making it easier to manage and scale as new features are added.
+- **Predictable State Transitions**: By using `reducers`, state changes follow clear and predictable patterns, reducing potential bugs and improving maintainability.
+- **Extensibility**: The app became more flexible when handling new actions or more complex state updates, such as handling multiple user inputs or more advanced tip calculations.
+
+This migration has led to a more robust and scalable solution, while still maintaining the core performance optimizations, such as the use of `useMemo` for expensive calculations.
+
+
 ## 🛠 Technologies Used
 
 - **ReactJS**: Frontend library for building the user interface.
