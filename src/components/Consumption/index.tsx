@@ -3,7 +3,7 @@ import TipPercentageForm from "../TipPercentageForm"
 import ConsumptionItem from "./ConsumptionItem"
 import { IConsumptionProps } from "./consumption.types"
 
-const Consumption = ({order, deleteOrder, percentage, setPercentage, placeOrder}:IConsumptionProps) => {
+const Consumption = ({order, percentage, dispatch}:IConsumptionProps) => {
   return (
 
     <div className=" p-5 h-full">
@@ -15,9 +15,9 @@ const Consumption = ({order, deleteOrder, percentage, setPercentage, placeOrder}
            <p className=" text-center">The order is empty</p>
            : 
            <>
-           {order.map(elem => <ConsumptionItem key={elem.id} item={elem} deleteOrder={deleteOrder} />)}
-           <TipPercentageForm setPercentage={setPercentage} percentage={percentage} />
-           <OrderTotals order={order} percentage={percentage} placeOrder={placeOrder} />
+           {order.map(elem => <ConsumptionItem key={elem.id} item={elem} dispatch={dispatch} />)}
+           <TipPercentageForm dispatch={dispatch} percentage={percentage} />
+           <OrderTotals order={order} percentage={percentage} dispatch={dispatch} />
            </>
         }
      

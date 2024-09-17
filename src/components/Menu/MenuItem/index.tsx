@@ -1,6 +1,6 @@
 import { IMenuItemProps } from "./menuItem.types"
 
-const MenuItem = ({item , addItem} : IMenuItemProps) => {
+const MenuItem = ({item , dispatch} : IMenuItemProps) => {
 
     const {name, price} = item;
 
@@ -8,7 +8,7 @@ const MenuItem = ({item , addItem} : IMenuItemProps) => {
     <>
     <button 
     className=" border-2 border-teal-400 rounded-md hover:bg-teal-200 w-full p-3 flex justify-between"
-    onClick={()=> addItem(item)}
+    onClick={()=> dispatch({type:'addItem', payload:{item}})}
     >
 
     <p>{name}</p>

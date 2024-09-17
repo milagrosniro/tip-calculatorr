@@ -1,9 +1,11 @@
+import { Dispatch } from "react";
 import { IOrderState, ITipOptions } from "../../types";
+import { OrderActions } from "../reducers/orderReducer.types";
 
 export interface IOrderTotalsProps{
     order: IOrderState;
     percentage: ITipOptions['value'];
-    placeOrder: () => void
+    dispatch: Dispatch<OrderActions>;
 }
 
 export interface ITotalsState {

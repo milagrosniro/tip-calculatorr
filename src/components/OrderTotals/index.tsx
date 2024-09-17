@@ -2,7 +2,7 @@ import { useMemo} from "react";
 import { IOrderTotalsProps} from "./orderTotals.types";
 import { formatCurrency } from "../../helpers";
 
-const OrderTotals = ({order, percentage, placeOrder}: IOrderTotalsProps) => {
+const OrderTotals = ({order, percentage, dispatch}: IOrderTotalsProps) => {
 
 const subtotalAmount =  useMemo(()=> order ? order.reduce((total, item)=> total + (item.quantity*item.price),0): 0,[order]) 
 const tipAMount = useMemo(()=>subtotalAmount*percentage,[percentage, subtotalAmount])
@@ -34,7 +34,7 @@ const totalAmount = useMemo(()=>subtotalAmount+tipAMount,[subtotalAmount, tipAMo
     <button 
     className=" w-full bg-black p-3 uppercase text-white font-bold mt-10 disabled:opacity-10"
     disabled={totalAmount === 0}
-    onClick={placeOrder}
+    onClick={()=>dispatch({type:'placeOrder'})}
     >Keep order</button>
     </>
   );

@@ -3,7 +3,7 @@ import { menuItems } from "../../data/db";
 import { IMenuProps, IMenuState } from "./menu.types";
 import MenuItem from "./MenuItem";
 
-const Menu = ({addItem} : IMenuProps) => {
+const Menu = ({dispatch} : IMenuProps) => {
 
     const [data, setData] = useState<IMenuState>([]);
 
@@ -17,7 +17,7 @@ const Menu = ({addItem} : IMenuProps) => {
       <div className=" space-y-3 mt-10">
 
       {
-        data.map(item => <MenuItem key={item.id} item={item}  addItem={addItem} />)
+        data.map(item => <MenuItem key={item.id} item={item}  dispatch={dispatch} />)
       }
       </div>
     </div>

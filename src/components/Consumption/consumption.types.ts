@@ -1,9 +1,9 @@
-import { IOrderItem, IOrderState, ITipOptions } from "../../types";
+import { Dispatch } from "react";
+import { IOrderState } from "../../types";
+import { OrderActions } from "../reducers/orderReducer.types";
 
 export interface IConsumptionProps{
     order: IOrderState;
-    deleteOrder: (value: IOrderItem['id']) => void;
     percentage: number;
-    setPercentage: (value: ITipOptions['value']) => void;
-    placeOrder : () => void
+    dispatch: Dispatch<OrderActions>;
 }

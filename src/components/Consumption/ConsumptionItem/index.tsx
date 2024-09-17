@@ -1,7 +1,7 @@
 import { formatCurrency } from "../../../helpers"
 import { IConsumptionItemProps } from "./consumptionItem.types"
 
-const ConsumptionItem = ({item, deleteOrder}: IConsumptionItemProps) => {
+const ConsumptionItem = ({item, dispatch}: IConsumptionItemProps) => {
     const {name, price, quantity} = item
   return (
     
@@ -19,7 +19,7 @@ const ConsumptionItem = ({item, deleteOrder}: IConsumptionItemProps) => {
 
     <button
     className=" flex items-center justify-center bg-red-600 h-8 w-8 rounded-full text-white font-black"
-    onClick={()=>deleteOrder(item.id)}
+    onClick={()=>dispatch({type:'deleteOrder', payload:{orderItem: item.id}})}
     > x </button>
 </div>
 
